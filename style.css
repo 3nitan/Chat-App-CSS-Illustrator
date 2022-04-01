@@ -1,4 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 :root {
+  --font-family: 'Rubik', sans-serif;
   --pale-violet: hsl(276, 100%, 81%);
   --moderate-violet: hsl(276, 55%, 52%);
   --desaturated-dark-violet: hsl(271, 15%, 43%);
@@ -19,6 +25,200 @@
   /* Font */
 }
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: var(--font-family);
+  background-color: var(--light-grayish-violet);
+  font-size: 16px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General classes */
+.name {
+  font-size: 12px;
+}
+
+.status {
+  font-size: 8px;
+  color: var(--grayish-blue);
+}
+
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  max-height: 100%;
+  height: 450px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: var(--white);
+  margin-bottom: 40px;
+}
+
+.phone-header {
+  background-image: linear-gradient(to right, hsl(264, 100%, 61%),hsl(293, 100%, 63%)) ;
+  border-radius: 20px 20px 8px 8px;
+  width: 100%;
+  height: 60px;
+}
+
+.phone-notch {
+  background-color: var(--white);
+  height: 20px;
+  width: 130px;
+  margin: auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.phone-header-content {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.phone-header-left {
+  display: flex;
+  width: 65%;
+  justify-content: space-around;
+}
+
+.uil-ellipsis-v {
+  margin-right: 15px;
+}
+
+.phone-header-content .uil-angle-left {
+  font-size: 20px;
+}
+
+.phone-header-content img {
+  width: 25px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+}
+
+.phone-body {
+  overflow: auto;
+  width: 100%;
+  flex-grow: 1;
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--light-grayish-violet);
+}
+
+.phone-body .message {
+  font-size: 8px;
+  display: inline-block;
+  margin-top: 7px;
+}
+
+.phone-body .left p {
+  background-color: var(--white);
+  color: hsl(276, 55%, 52%);
+  border-radius: 10px 10px 10px 5px;
+  padding: 7px;
+  margin-left: 10px;
+}
+
+.phone-body .right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pictures {
+  margin-top: 7px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pictures img {
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.phone-body .right p {
+  background-color: var(--white);
+  border-radius: 10px 10px 5px 10px;
+  padding: 7px;
+  margin-right: 10px;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  margin-left: 10px;
+  margin-top: 7px;
+  color: var(--white);
+  background-image: linear-gradient(
+    to left,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  padding: 7px;
+  border-radius: 10px 10px 10px 5px;
+}
+.payment-left {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.payment-left i {
+  color: var(--light-grayish-violet);
+}
+
+.payment p {
+  font-size: 8px;
+  margin-left: 5px;
+}
+
+.payment .amount {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.type-message {
+  margin: auto;
+  margin-top: 20px;
+  background-color: var(--white);
+  width: 90%;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.type-message p {
+  font-size: 10px;
+  color: var(--light-grayish-violet);
+  margin-left: 15px;
+}
+
+.type-message .send {
+  width: 30px;
+  height: 30px;
+  background-color: var(--very-dark-desaturated-violet);
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border-radius: 100px;
+}
+
+.type-message .send i {
+  color: var(--white);
 }
